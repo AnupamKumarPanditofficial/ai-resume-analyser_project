@@ -45,7 +45,7 @@ Many highly qualified candidates face rejection simply because their resumes are
 ### Backend
 - **Framework:** Java 17, Spring Boot 3.3.x
 - **Database:** MongoDB (Spring Data MongoDB)
-- **AI / LLM:** Google Gemini REST API (gemini-1.5-flash)
+- **AI / LLM:** Google Gemini  API (gemini-3.5-flash)
 - **Utilities:** Apache PDFBox, Jackson, Lombok
 - **Deployment:** Dockerized and deployed on Render
 
