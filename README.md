@@ -1,6 +1,6 @@
 # 🚀 AI Resume Analyzer (ATS Optimizer)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-success?style=for-the-badge&logo=vercel)](https://ai-resume-analyser-project.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-success?style=for-the-badge&logo=vercel)](https://ai-resume-analys-git-ea6168-anupamkumarpanditofficials-projects.vercel.app/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)](https://spring.io/projects/spring-boot)
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](#)
@@ -57,7 +57,7 @@ Many highly qualified candidates face rejection simply because their resumes are
 
 ## 🚀 Live Demo
 
-**Frontend (Vercel):** [https://ai-resume-analyser-project.vercel.app/](https://ai-resume-analyser-project.vercel.app/)  
+**Frontend (Vercel):** [Live Link](https://ai-resume-analys-git-ea6168-anupamkumarpanditofficials-projects.vercel.app/)  
 *(Please note: Since the backend is hosted on Render's free tier, the first request might take 30-50 seconds to spin up the server if it was idle.)*
 
 ---
