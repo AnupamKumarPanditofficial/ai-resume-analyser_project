@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class GeminiConfig {
 
     private String apiKey;
-    private String model = "gemini-1.5-flash";
+    private String model = "gemini-3.5-flash";
 
     public String getApiKey() {
         return apiKey;
