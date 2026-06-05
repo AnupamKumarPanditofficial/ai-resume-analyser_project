@@ -1,0 +1,34 @@
+# backend/src/main/resources/application.yml
+gemini:
+  api-key: ${GEMINI_API_KEY}
+  model: gemini-1.5-flash
+
+spring:
+  config:
+    import: optional:file:./.env.properties
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/resume_analyzer}
+      auto-index-creation: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+app:
+  cors:
+    allowed-origin: ${CORS_ALLOWED_ORIGIN:http://localhost:5173}
+
+rate-limit:
+  requests-per-minute: 5
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.resumeanalyzer: INFO
+    org.springframework.data.mongodb: WARN
