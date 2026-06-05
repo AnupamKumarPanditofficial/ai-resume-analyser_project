@@ -1,11 +1,10 @@
 # 🚀 AI Resume Analyzer (ATS Optimizer)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-success?style=for-the-badge&logo=vercel)](https://ai-resume-analys-git-ea6168-anupamkumarpanditofficials-projects.vercel.app/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)](https://spring.io/projects/spring-boot)
-[![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](#)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](#)
-
+[![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
 A Full-Stack AI-powered Applicant Tracking System (ATS) optimization tool. It analyzes resumes against job descriptions, calculates ATS scores, and provides actionable, STAR-method-based feedback to help candidates increase their interview shortlisting chances.
 
@@ -18,6 +17,7 @@ A Full-Stack AI-powered Applicant Tracking System (ATS) optimization tool. It an
 
 ## 🎯 The Problem It Solves
 Many highly qualified candidates face rejection simply because their resumes aren't optimized for automated Applicant Tracking Systems (ATS). Existing solutions are often paid or lack deep context analysis. 
+
 **This project solves that by:**
 - Extracting exact missing and matched keywords based on the JD context.
 - Providing actionable rewrites for weak resume bullet points using the **STAR method**.
@@ -27,11 +27,11 @@ Many highly qualified candidates face rejection simply because their resumes are
 
 ## ✨ Key Features & Technical Highlights
 
-- **Intelligent PDF Parsing:** Implemented `Apache PDFBox` to robustly extract text from complex resume layouts without losing structural context.
-- **AI Integration (Gemini 3.5 Flash):** Prompt-engineered a system instruction to force deterministic, structured JSON responses from the LLM, preventing hallucination.
-- **Security & Rate Limiting:** Built a custom Spring Boot `Filter` to implement IP-based rate limiting (5 req/min) to protect the Gemini API quota and prevent abuse.
-- **Pagination & Caching:** Designed MongoDB aggregations and implemented Spring Data pagination to load historical analysis results efficiently.
-- **Production-Ready Configuration:** Segregated environment variables for seamless deployment, with dynamic port bindings and strict CORS configurations.
+- **Reliable PDF Parsing:** Used `Apache PDFBox` to extract text from resume PDFs while maintaining structural context for the AI.
+- **AI Integration (Gemini 1.5 Flash):** Wrote specific prompts to ensure the LLM returns consistent, structured JSON responses, preventing random text outputs (hallucinations).
+- **API Rate Limiting:** Implemented a custom Spring Boot `Filter` to restrict requests (5 req/min) based on IP, protecting the free Gemini API quota from abuse.
+- **Pagination:** Used Spring Data MongoDB pagination to load past resume analysis results efficiently without overloading the database.
+- **Environment Configuration:** Segregated environment variables for seamless deployment, with dynamic port bindings and strict CORS configurations.
 
 ---
 
@@ -45,7 +45,7 @@ Many highly qualified candidates face rejection simply because their resumes are
 ### Backend
 - **Framework:** Java 17, Spring Boot 3.3.x
 - **Database:** MongoDB (Spring Data MongoDB)
-- **AI / LLM:** Google Gemini REST API (gemini-3.5-flash)
+- **AI / LLM:** Google Gemini REST API (gemini-1.5-flash)
 - **Utilities:** Apache PDFBox, Jackson, Lombok
 - **Deployment:** Dockerized and deployed on Render
 
@@ -54,8 +54,8 @@ Many highly qualified candidates face rejection simply because their resumes are
 ## 🏗️ System Architecture
 
 1. **Client** uploads a PDF and pastes the Job Description.
-2. **Spring Boot Backend** validates the file, extracts text, and constructs a robust prompt.
-3. Request is sent to **Gemini API** for semantic analysis.
+2. **Spring Boot Backend** validates the file, extracts text, and constructs the prompt.
+3. Request is sent to the **Gemini API** for semantic analysis.
 4. Response is parsed, validated, and saved to **MongoDB Atlas**.
 5. **React Client** renders the actionable insights with dynamic charts and feedback UI.
 
@@ -76,20 +76,29 @@ Many highly qualified candidates face rejection simply because their resumes are
 - MongoDB instance (Local or Atlas)
 - Gemini API Key
 
+ ### 1. Clone the Repository
+```bash
+git clone <your-github-repo-link-here>
+cd <your-repository-folder-name>
+```
+
 ### Backend Setup
 ```bash
 cd backend
+
 # Create a .env.properties file with your credentials
 echo "GEMINI_API_KEY=your_key_here" > .env.properties
 echo "MONGODB_URI=mongodb://localhost:27017/resume_analyzer" >> .env.properties
-```
-# Run the Spring Boot application
+
+# For Linux/macOS
 ./mvnw spring-boot:run
+
+# For Windows
+mvnw.cmd spring-boot:run
 ```
-```
-### Frontend setup
-```
+
+### frontend
+```bash
 cd frontend
 npm install
 npm run dev
-```
