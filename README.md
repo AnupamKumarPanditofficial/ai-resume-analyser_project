@@ -6,7 +6,13 @@
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](#)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](#)
 
+
 A Full-Stack AI-powered Applicant Tracking System (ATS) optimization tool. It analyzes resumes against job descriptions, calculates ATS scores, and provides actionable, STAR-method-based feedback to help candidates increase their interview shortlisting chances.
+
+<img width="1364" height="595" alt="{09D2B916-7878-425A-B2BE-21364D7332FA}" src="https://github.com/user-attachments/assets/9f8f580c-67e4-4e0c-bb25-d5247cd8502c" />
+<img width="1338" height="573" alt="{DF64991F-F153-4216-ACC4-05627DAF4A48}" src="https://github.com/user-attachments/assets/930645d0-c805-44e7-b379-4f87a063fc8a" />
+<img width="1156" height="510" alt="{DC35194B-AB78-430F-A026-BFFB398D1F80}" src="https://github.com/user-attachments/assets/0dd1bb8a-8a77-473c-9210-258715ce39e0" />
+<img width="1351" height="590" alt="{0F52EFAD-67A9-4C23-8CEE-CD1DC114A3C3}" src="https://github.com/user-attachments/assets/7d13dec7-958a-42f4-b4a9-4140c434be57" />
 
 ---
 
